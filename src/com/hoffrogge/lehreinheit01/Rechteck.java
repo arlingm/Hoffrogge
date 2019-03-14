@@ -6,11 +6,15 @@ public class Rechteck {
 
 	private int xKoordinate;
 	private int yKoordinate;
+	private int größeX;
+	private int größeY;
 
-	public Rechteck(int xKoordinate, int yKoordinate) {
+	public Rechteck(int xKoordinate, int yKoordinate, int größeX, int größeY) {
 		super();
 		this.xKoordinate = xKoordinate;
 		this.yKoordinate = yKoordinate;
+		this.größeX = größeX;
+		this.größeY = größeY;
 	}
 
 	public void zeichnen(Graphics graphics) {
@@ -20,10 +24,10 @@ public class Rechteck {
 		 * y2) in this graphics context's coordinate system.
 		 */
 
-		graphics.drawLine(xKoordinate, yKoordinate, xKoordinate + 100, yKoordinate);
-		graphics.drawLine(xKoordinate + 100, yKoordinate, xKoordinate + 100, yKoordinate + 100);
-		graphics.drawLine(xKoordinate + 100, yKoordinate + 100, xKoordinate, yKoordinate + 100);
-		graphics.drawLine(xKoordinate, yKoordinate + 100, xKoordinate, yKoordinate);
+		graphics.drawLine(xKoordinate, yKoordinate, xKoordinate + größeX, yKoordinate);
+		graphics.drawLine(xKoordinate + größeX, yKoordinate, xKoordinate + größeX, yKoordinate + größeY);
+		graphics.drawLine(xKoordinate + größeX, yKoordinate + größeY, xKoordinate, yKoordinate + größeY);
+		graphics.drawLine(xKoordinate, yKoordinate + größeY, xKoordinate, yKoordinate);
 	}
 
 }

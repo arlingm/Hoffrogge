@@ -36,8 +36,19 @@ public class Zeichenflaeche extends Quadrat {
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
 
-		Tetrominu tetrominu = new Tetrominu(100, 100);
-		tetrominu.quadratZeichnen(graphics);
+		Tetrominu tetrominu = new Tetrominu(0, 0, 50, 50);
+		tetrominu.tetrominoT(graphics);
+		Tetrominu tetrominu2 = new Tetrominu(200, 0, 50, 50);
+		tetrominu2.tetrominoO(graphics);
+		Tetrominu tetrominu3 = new Tetrominu(400, 400, 50, 50);
+		tetrominu3.tetrominoI(graphics);
+		Tetrominu tetrominu4 = new Tetrominu(200, 200, 50, 50);
+		tetrominu4.tetrominoJ(graphics);
 
+		// zeichnet ein Dreieck
+		// new Dreieck(200, 200).zeichnen(graphics);
+
+		// zeichnet ein gleichseitiges Dreieck
+		// new GleichseitigesDreieck(300, 300).zeichnen(graphics);
 	}
 }

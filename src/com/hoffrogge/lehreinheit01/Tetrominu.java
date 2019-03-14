@@ -6,24 +6,72 @@ public class Tetrominu {
 
 	private int xKoordinate;
 	private int yKoordinate;
+	private int größeX;
+	private int größeY;
 
-	public Tetrominu(int K) {
+	public Tetrominu(int xKoordinate, int yKoordinate, int größeX, int größeY) {
 		super();
 		this.xKoordinate = xKoordinate;
 		this.yKoordinate = yKoordinate;
+		this.größeX = größeX;
+		this.größeY = größeY;
 	}
 
-	public void quadratZeichnen(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate);
+	public void tetrominoT(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
 		rechteck.zeichnen(graphics);
 
-		Rechteck rechteck2 = new Rechteck(xKoordinate + 100, yKoordinate + 100);
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
 		rechteck2.zeichnen(graphics);
 
-		Rechteck rechteck3 = new Rechteck(xKoordinate + 100, yKoordinate);
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
 		rechteck3.zeichnen(graphics);
 
-		Rechteck rechteck4 = new Rechteck(xKoordinate + 200, yKoordinate);
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
 		rechteck4.zeichnen(graphics);
+	}
+
+	public void tetrominoI(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 3, yKoordinate, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+	}
+
+	public void tetrominoO(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+		;
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+	}
+
+	public void tetrominoJ(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeX, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+
 	}
 }
