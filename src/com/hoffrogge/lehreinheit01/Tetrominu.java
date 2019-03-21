@@ -70,8 +70,66 @@ public class Tetrominu {
 		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
 		rechteck3.zeichnen(graphics);
 
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeX, größeX, größeY);
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeY, größeX, größeY);
 		rechteck4.zeichnen(graphics);
 
+	}
+
+	public void tetrominoL(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+	}
+
+	public void tetrominoS(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+	}
+
+	public void tetrominoZ(Graphics graphics) {
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
+
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeY, größeX, größeY);
+		rechteck4.zeichnen(graphics);
+	}
+
+	public int getXKoordinate() {
+		return xKoordinate;
+	}
+
+	public int getYKoordinate() {
+		return yKoordinate;
+	}
+
+	public int getGrößeX() {
+		return größeX;
+	}
+
+	public int getGrößeY() {
+		return größeY;
 	}
 }
