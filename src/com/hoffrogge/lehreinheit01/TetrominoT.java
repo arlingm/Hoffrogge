@@ -2,11 +2,7 @@ package com.hoffrogge.lehreinheit01;
 
 import java.awt.Graphics;
 
-import com.hoffrogge.lehreinheit03.Farbe;
-import com.hoffrogge.lehreinheit04.GeometrischeFigur;
-import com.hoffrogge.lehreinheit04.Punkt;
-
-public class TetrominoT extends Tetrominu implements GeometrischeFigur {
+public class TetrominoT extends Tetrominu {
 
 	private int xKoordinate, yKoordinate, größeX, größeY;
 
@@ -19,40 +15,27 @@ public class TetrominoT extends Tetrominu implements GeometrischeFigur {
 
 	}
 
-	@Override
-	public void setMittelpunkt(Punkt mittelpunkt) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Punkt getMittelPunkt() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setDurchmesser(int d) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Farbe getLinienFarbe() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setLinienFarbe(Farbe farbe) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void zeichnen(Graphics graphics) {
-		// TODO Auto-generated method stub
+		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
+		rechteck.zeichnen(graphics);
 
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
+		rechteck2.zeichnen(graphics);
+
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
+		rechteck3.zeichnen(graphics);
+
+		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
+		rechteck4.zeichnen(graphics);
 	}
 
+	public void bewegeNachRechts() {
+
+		xKoordinate += größeX;
+	}
+
+	public void bewegeNachLinks() {
+
+		xKoordinate -= größeX;
+	}
 }

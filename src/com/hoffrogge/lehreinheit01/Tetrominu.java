@@ -1,8 +1,18 @@
 package com.hoffrogge.lehreinheit01;
 
 import java.awt.Graphics;
+import java.util.List;
 
-public class Tetrominu {
+import com.hoffrogge.lehreinheit03.Farbe;
+import com.hoffrogge.lehreinheit04.Punkt;
+import com.hoffrogge.tetris.TetrominoI;
+import com.hoffrogge.tetris.TetrominoJ;
+import com.hoffrogge.tetris.TetrominoL;
+import com.hoffrogge.tetris.TetrominoO;
+import com.hoffrogge.tetris.TetrominoS;
+import com.hoffrogge.tetris.TetrominoSpielstein;
+
+public class Tetrominu implements TetrominoSpielstein {
 
 	private int xKoordinate;
 	private int yKoordinate;
@@ -18,118 +28,182 @@ public class Tetrominu {
 	}
 
 	public void tetrominoT(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoI tetrominoI = new TetrominoI(0, 100, 50, 50);
+		tetrominoI.zeichnen(graphics);
 	}
 
 	public void tetrominoI(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 3, yKoordinate, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoT tetrominoT = new TetrominoT(200, 0, 50, 50);
+		tetrominoT.zeichnen(graphics);
 	}
 
 	public void tetrominoO(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-		;
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoJ tetrominoJ = new TetrominoJ(400, 0, 50, 50);
+		tetrominoJ.zeichnen(graphics);
 	}
 
 	public void tetrominoJ(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeY, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoL tetrominoL = new TetrominoL(600, 0, 50, 50);
+		tetrominoL.zeichnen(graphics);
 
 	}
 
 	public void tetrominoL(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoT tetrominoT = new TetrominoT(0, 200, 50, 50);
+		tetrominoT.zeichnen(graphics);
 	}
 
 	public void tetrominoS(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoS tetrominoS = new TetrominoS(200, 200, 50, 50);
+		tetrominoS.zeichnen(graphics);
 	}
 
 	public void tetrominoZ(Graphics graphics) {
-		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
-		rechteck.zeichnen(graphics);
-
-		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
-		rechteck2.zeichnen(graphics);
-
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
-		rechteck3.zeichnen(graphics);
-
-		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeY, größeX, größeY);
-		rechteck4.zeichnen(graphics);
+		TetrominoO tetrominoO = new TetrominoO(400, 200, 50, 50);
+		tetrominoO.zeichnen(graphics);
 	}
 
-	public int getXKoordinate() {
-		return xKoordinate;
+	@Override
+	public void setMittelpunkt(Punkt mittelpunkt) {
+		// TODO Auto-generated method stub
+
 	}
 
-	public int getYKoordinate() {
-		return yKoordinate;
+	@Override
+	public Punkt getMittelPunkt() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public int getGrößeX() {
-		return größeX;
+	@Override
+	public void setDurchmesser(int d) {
+		// TODO Auto-generated method stub
+
 	}
 
-	public int getGrößeY() {
-		return größeY;
+	@Override
+	public Farbe getLinienFarbe() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+	@Override
+	public void setLinienFarbe(Farbe farbe) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void zeichnen(Graphics graphics) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int compareTo(TetrominoSpielstein o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getHoechstesY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getTiefstesY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getKanteLinksX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getKanteRechtsX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setX(int x) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setY(int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void bewegeNachUnten() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void bewegeNachRechts() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void bewegeNachLinks() {
+
+	}
+
+	@Override
+	public void rotiereNachLinks() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void rotiereNachRechts() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean faelltAuf(TetrominoSpielstein tetrominoSpielstein) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<TetrominoSpielstein> getViertelBloecke() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Farbe getFuellFarbe() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setFuellFarbe(Farbe farbe) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

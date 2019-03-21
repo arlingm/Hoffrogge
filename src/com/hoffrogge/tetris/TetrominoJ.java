@@ -4,13 +4,12 @@ import java.awt.Graphics;
 
 import com.hoffrogge.lehreinheit01.Rechteck;
 import com.hoffrogge.lehreinheit01.Tetrominu;
-import com.hoffrogge.lehreinheit04.GeometrischeFigur;
 
-public class TetrominoZ extends Tetrominu implements GeometrischeFigur {
+public class TetrominoJ extends Tetrominu {
 
 	private int xKoordinate, yKoordinate, größeX, größeY;
 
-	public TetrominoZ(int xKoordinate, int yKoordinate, int größeX, int größeY) {
+	public TetrominoJ(int xKoordinate, int yKoordinate, int größeX, int größeY) {
 		super(xKoordinate, yKoordinate, größeX, größeY);
 		this.xKoordinate = xKoordinate;
 		this.yKoordinate = yKoordinate;
@@ -26,7 +25,7 @@ public class TetrominoZ extends Tetrominu implements GeometrischeFigur {
 		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
 		rechteck2.zeichnen(graphics);
 
-		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
+		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX * 2, yKoordinate, größeX, größeY);
 		rechteck3.zeichnen(graphics);
 
 		Rechteck rechteck4 = new Rechteck(xKoordinate + größeX * 2, yKoordinate + größeY, größeX, größeY);
@@ -42,5 +41,4 @@ public class TetrominoZ extends Tetrominu implements GeometrischeFigur {
 
 		xKoordinate -= größeX;
 	}
-
 }
