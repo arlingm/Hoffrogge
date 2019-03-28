@@ -7,7 +7,7 @@ import com.hoffrogge.lehreinheit03.Farbe;
 import com.hoffrogge.lehreinheit04.Punkt;
 import com.hoffrogge.tetris.TetrominoI;
 import com.hoffrogge.tetris.TetrominoJ;
-import com.hoffrogge.tetris.TetrominoL;
+import com.hoffrogge.tetris.TetrominoT;
 import com.hoffrogge.tetris.TetrominoO;
 import com.hoffrogge.tetris.TetrominoS;
 import com.hoffrogge.tetris.TetrominoSpielstein;
@@ -28,38 +28,38 @@ public class Tetrominu implements TetrominoSpielstein {
 	}
 
 	public void tetrominoT(Graphics graphics) {
-		TetrominoI tetrominoI = new TetrominoI(0, 100, 50, 50);
+		TetrominoI tetrominoI = new TetrominoI(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoI.zeichnen(graphics);
 	}
 
 	public void tetrominoI(Graphics graphics) {
-		TetrominoT tetrominoT = new TetrominoT(200, 0, 50, 50);
+		TetrominoT tetrominoT = new TetrominoT(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoT.zeichnen(graphics);
 	}
 
 	public void tetrominoO(Graphics graphics) {
-		TetrominoJ tetrominoJ = new TetrominoJ(400, 0, 50, 50);
+		TetrominoJ tetrominoJ = new TetrominoJ(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoJ.zeichnen(graphics);
 	}
 
 	public void tetrominoJ(Graphics graphics) {
-		TetrominoL tetrominoL = new TetrominoL(600, 0, 50, 50);
+		TetrominoT tetrominoL = new TetrominoT(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoL.zeichnen(graphics);
 
 	}
 
 	public void tetrominoL(Graphics graphics) {
-		TetrominoT tetrominoT = new TetrominoT(0, 200, 50, 50);
+		TetrominoT tetrominoT = new TetrominoT(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoT.zeichnen(graphics);
 	}
 
 	public void tetrominoS(Graphics graphics) {
-		TetrominoS tetrominoS = new TetrominoS(200, 200, 50, 50);
+		TetrominoS tetrominoS = new TetrominoS(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoS.zeichnen(graphics);
 	}
 
 	public void tetrominoZ(Graphics graphics) {
-		TetrominoO tetrominoO = new TetrominoO(400, 200, 50, 50);
+		TetrominoO tetrominoO = new TetrominoO(xKoordinate, xKoordinate, größeX, größeY);
 		tetrominoO.zeichnen(graphics);
 	}
 

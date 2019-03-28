@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import com.hoffrogge.lehreinheit01.Rechteck;
 import com.hoffrogge.lehreinheit01.Tetrominu;
 
-public class TetrominoL extends Tetrominu {
+public class TetrominoL extends Tetrominu implements TetrominoSpielstein {
 
 	private int xKoordinate, yKoordinate, größeX, größeY;
 
@@ -22,7 +22,7 @@ public class TetrominoL extends Tetrominu {
 		Rechteck rechteck = new Rechteck(xKoordinate, yKoordinate, größeX, größeY);
 		rechteck.zeichnen(graphics);
 
-		Rechteck rechteck2 = new Rechteck(xKoordinate, yKoordinate + größeY, größeX, größeY);
+		Rechteck rechteck2 = new Rechteck(xKoordinate + größeX, yKoordinate + größeY, größeX, größeY);
 		rechteck2.zeichnen(graphics);
 
 		Rechteck rechteck3 = new Rechteck(xKoordinate + größeX, yKoordinate, größeX, größeY);
@@ -41,5 +41,4 @@ public class TetrominoL extends Tetrominu {
 
 		xKoordinate -= größeX;
 	}
-
 }

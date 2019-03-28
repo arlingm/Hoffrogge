@@ -28,6 +28,7 @@ public class Rechteck {
 		graphics.drawLine(xKoordinate + größeX, yKoordinate, xKoordinate + größeX, yKoordinate + größeY);
 		graphics.drawLine(xKoordinate + größeX, yKoordinate + größeY, xKoordinate, yKoordinate + größeY);
 		graphics.drawLine(xKoordinate, yKoordinate + größeY, xKoordinate, yKoordinate);
+		// graphics.fillRect(xKoordinate, yKoordinate, größeX, größeY);
 	}
 
 }
